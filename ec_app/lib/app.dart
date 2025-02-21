@@ -1,4 +1,4 @@
-import 'package:ec_app/features/authentication/screens.onboarding/onboarding/onboarding.dart';
+import 'package:ec_app/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:ec_app/utils/theme/theme.dart';
 import 'package:get/get.dart';
