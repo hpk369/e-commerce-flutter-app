@@ -1,9 +1,12 @@
-import 'package:flutter/cupertino.dart';
+//import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+//import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
+import '../../signup/signup.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({
@@ -59,7 +62,8 @@ class LoginForm extends StatelessWidget {
           const SizedBox(height: TSizes.spaceBtwItems),
 
           /// Create Account Button
-          SizedBox(width: double.infinity,child: OutlinedButton(onPressed: (){}, child: Text(TTexts.createAccount))),
+          SizedBox(width: double.infinity,
+              child: OutlinedButton(onPressed: () => Get.to(() => const SignupScreen()), child: Text(TTexts.createAccount))),
         ],
       ),
     ),

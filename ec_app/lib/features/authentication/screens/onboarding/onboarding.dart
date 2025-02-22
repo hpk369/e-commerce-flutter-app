@@ -7,7 +7,7 @@ import 'package:ec_app/features/authentication/screens/onboarding/widgets/onboar
 import 'package:ec_app/features/authentication/screens/onboarding/widgets/onboarding_next.dart';
 import 'package:ec_app/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
 import 'package:ec_app/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';
-import '../../controllers.onboarding/onboarding_controller.dart';
+import '../../controllers/onboarding_controller.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
