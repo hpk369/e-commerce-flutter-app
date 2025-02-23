@@ -6,7 +6,6 @@ import '../../../../utils/constants/text_strings.dart';
 import '../../../../common/widgets/login_signup/form_divider.dart';
 import 'package:ec_app/common/widgets/login_signup/social_buttons.dart';
 import 'package:ec_app/features/authentication/screens/signup/widgets/signup_form.dart';
-import 'package:ec_app/utils/helpers/helper_functions.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
