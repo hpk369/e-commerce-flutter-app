@@ -1,4 +1,4 @@
-//import 'package:flutter/cupertino.dart';
+import 'package:ec_app/navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
@@ -58,7 +58,7 @@ class LoginForm extends StatelessWidget {
           const SizedBox(height: TSizes.spaceBtwSections),
 
           /// Sign In Button
-          SizedBox(width: double.infinity,child: ElevatedButton(onPressed: (){}, child: Text(TTexts.signIn))),
+          SizedBox(width: double.infinity,child: ElevatedButton(onPressed: () => Get.to(() => const NavigationMenu()), child: Text(TTexts.signIn))),
           const SizedBox(height: TSizes.spaceBtwItems),
 
           /// Create Account Button
