@@ -1,5 +1,8 @@
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:ec_app/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:ec_app/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:ec_app/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:ec_app/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:ec_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
@@ -8,6 +11,7 @@ import '../../../../common/widgets/appBar/appbar.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/image_text_widgets/vertical_image_text.dart';
+import '../../../../common/widgets/images/t_rounded_image.dart';
 import '../../../../common/widgets/products/cart/cart_menu_icon.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/colors.dart';
@@ -58,6 +62,21 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+
+            /// Body -- Tutorial [Section #3, Video #5]
+            Padding(
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              child: TPromoSlider(banners: [
+                TImages.promoBanner1,
+                TImages.promoBanner2,
+                TImages.promoBanner3,
+                TImages.promoBanner4,
+                TImages.promoBanner5,
+                TImages.promoBanner6,
+                TImages.promoBanner7,
+                TImages.promoBanner8,
+              ],),
+            )
           ],
         ),
       ),
