@@ -12,7 +12,9 @@ import '../../../../common/widgets/custom_shapes/containers/primary_header_conta
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/image_text_widgets/vertical_image_text.dart';
 import '../../../../common/widgets/images/t_rounded_image.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/products/cart/cart_menu_icon.dart';
+import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/image_strings.dart';
@@ -66,16 +68,22 @@ class HomeScreen extends StatelessWidget {
             /// Body -- Tutorial [Section #3, Video #5]
             Padding(
               padding: const EdgeInsets.all(TSizes.defaultSpace),
-              child: TPromoSlider(banners: [
-                TImages.promoBanner1,
-                TImages.promoBanner2,
-                TImages.promoBanner3,
-                TImages.promoBanner4,
-                TImages.promoBanner5,
-                TImages.promoBanner6,
-                TImages.promoBanner7,
-                TImages.promoBanner8,
-              ],),
+              child: Column(
+                children: [
+                  /// -- Promo Slider -- Tutorial [Section #3, Video #6]
+                  const TPromoSlider(
+                    banners: [
+                      TImages.promoBanner1,
+                      TImages.promoBanner2,
+                      TImages.promoBanner3,
+                    ],
+                  ),
+                  const SizedBox(height: TSizes.spaceBtwSections),
+
+                  /// -- Popular Products -- Tutorial [Section #3, Video #7]
+                  TGridLayout(itemCount: 4, itemBuilder: (_, index) => const TProductCardVertical()),
+                ],
+              ),
             )
           ],
         ),
@@ -83,3 +91,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
