@@ -2,7 +2,9 @@ import 'package:ec_app/common/widgets/appBar/appBar.dart';
 import 'package:ec_app/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:ec_app/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:ec_app/common/widgets/texts/section_heading.dart';
+import 'package:ec_app/features/personalization/screens/profile/profile.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 import '../../../../common/widgets/list_tiles/user_profile_tile.dart';
@@ -33,7 +35,7 @@ class SettingsScreen extends StatelessWidget {
                   )),
 
                   /// User Profile Card
-                  TUserProfileTile(),
+                  TUserProfileTile(onPressed: () => Get.to(() => const ProfileScreen())),
                   const SizedBox(height: TSizes.spaceBtwSections),
                 ],
               ),
