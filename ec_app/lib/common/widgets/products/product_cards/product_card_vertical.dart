@@ -2,8 +2,10 @@ import 'package:ec_app/common/styles/shadows.dart';
 import 'package:ec_app/common/widgets/images/t_rounded_image.dart';
 import 'package:ec_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
+import '../../../../features/shop/product_details/product_details.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
@@ -22,7 +24,7 @@ class TProductCardVertical extends StatelessWidget {
 
     /// Container with side paddings, color, edges, radius and shadow
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(() => const ProductDetailScreen()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
