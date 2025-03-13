@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
-import '../../../../utils/constants/sizes.dart';
+import '../../../../../utils/constants/sizes.dart';
+
+
 
 class TRatingAndShare extends StatelessWidget {
   const TRatingAndShare({

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
-import '../../../../common/widgets/appBar/appBar.dart';
-import '../../../../common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
-import '../../../../common/widgets/icons/t_circular_icon.dart';
-import '../../../../common/widgets/images/t_rounded_image.dart';
-import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/image_strings.dart';
-import '../../../../utils/constants/sizes.dart';
-import '../../../../utils/helpers/helper_functions.dart';
+import '../../../../../common/widgets/appBar/appBar.dart';
+import '../../../../../common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
+import '../../../../../common/widgets/icons/t_circular_icon.dart';
+import '../../../../../common/widgets/images/t_rounded_image.dart';
+import '../../../../../utils/constants/colors.dart';
+import '../../../../../utils/constants/image_strings.dart';
+import '../../../../../utils/constants/sizes.dart';
+import '../../../../../utils/helpers/helper_functions.dart';
 
 class TProductImageSlider extends StatelessWidget {
   const TProductImageSlider({

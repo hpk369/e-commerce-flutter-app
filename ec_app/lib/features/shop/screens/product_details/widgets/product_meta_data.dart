@@ -5,11 +5,12 @@ import 'package:ec_app/common/widgets/texts/t_brand_title_text_with_verified_ico
 import 'package:ec_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../common/widgets/custom_shapes/containers/rounded_container.dart';
-import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/enums.dart';
-import '../../../../utils/constants/image_strings.dart';
-import '../../../../utils/constants/sizes.dart';
+import '../../../../../common/widgets/custom_shapes/containers/rounded_container.dart';
+import '../../../../../utils/constants/colors.dart';
+import '../../../../../utils/constants/enums.dart';
+import '../../../../../utils/constants/image_strings.dart';
+import '../../../../../utils/constants/sizes.dart';
+
 
 class TProductMetaData extends StatelessWidget {
   const TProductMetaData({
