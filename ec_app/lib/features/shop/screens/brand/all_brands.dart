@@ -1,12 +1,10 @@
 import 'package:ec_app/common/widgets/appBar/appBar.dart';
 import 'package:ec_app/common/widgets/brands/brand_card.dart';
 import 'package:ec_app/common/widgets/layouts/grid_layout.dart';
-import 'package:ec_app/common/widgets/products/sortable/sortable_products.dart';
 import 'package:ec_app/common/widgets/texts/section_heading.dart';
 import 'package:ec_app/features/shop/screens/brand/brand_products.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import '../../../../utils/constants/sizes.dart';
 

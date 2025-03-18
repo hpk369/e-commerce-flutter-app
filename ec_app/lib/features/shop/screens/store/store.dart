@@ -11,7 +11,6 @@ import 'package:ec_app/features/shop/screens/store/Widgets/category_tab.dart';
 import 'package:ec_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import '../../../../common/widgets/appBar/appBar.dart';
 
