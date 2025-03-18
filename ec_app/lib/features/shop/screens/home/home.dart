@@ -1,4 +1,3 @@
-import 'package:ec_app/common/widgets/all_products/all_products.dart';
 import 'package:ec_app/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:ec_app/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:ec_app/features/shop/screens/home/widgets/promo_slider.dart';
@@ -12,6 +11,7 @@ import '../../../../common/widgets/products/product_cards/product_card_vertical.
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
+import '../all_products/all_products.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
