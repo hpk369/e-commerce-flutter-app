@@ -1,4 +1,5 @@
 import 'package:ec_app/data/repositories/authentication/authentication_repository.dart';
+import 'package:ec_app/data/repositories/user/user_repository.dart';
 import 'package:ec_app/utils/popups/loaders.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +7,8 @@ import 'package:flutter/material.dart';
 import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/helpers/network_manager.dart';
 import '../../../../utils/popups/full_screen_loader.dart';
+import '../../../personalization/models/user_model.dart';
+import '../../screens/signup/verify_email.dart';
 
 class SignupController extends GetxController {
   static SignupController get instance => Get.find();
@@ -30,11 +33,19 @@ class SignupController extends GetxController {
 
       // Check Internet Connectivity
       final isConnected = await NetworkManager.instance.isConnected();
-      if(!isConnected) return;
+      if(!isConnected) {
+        // Remove Loader
+        TFullScreenLoader.stopLoading();
+        return;
+      };
 
 
       // Form Validation
-      if(signupFormKey.currentState!.validate()) return;
+      if(!signupFormKey.currentState!.validate()) {
+        // Remove Loader
+        TFullScreenLoader.stopLoading();
+        return;
+      };
 
       // Privacy Policy Check
       if(!privacyPolicy.value) {
@@ -59,15 +70,23 @@ class SignupController extends GetxController {
         profilePicture: '',
       );
 
-      // Show Success Message
+      final userRepository = Get.put(UserRepository());
+      await userRepository.saveUserRecord(newUser);
 
-      // Move to verify email screen
-    } catch (e) {
-      // Show some Generic Error to the user
-      TLoaders.errorSnackBar(title: 'Oh Snap!', message: e.toString());
-    } finally {
       // Remove Loader
       TFullScreenLoader.stopLoading();
+
+      // Show Success Message
+      TLoaders.successSnackBar(title: 'Congratulations', message: 'Your account has been created! Verify email to continue.');
+
+      // Move to verify email screen
+      Get.to(() => const VerifyEmailScreen());
+    } catch (e) {
+      // Remove Loader
+      TFullScreenLoader.stopLoading();
+
+      // Show some Generic Error to the user
+      TLoaders.errorSnackBar(title: 'Oh Snap!', message: e.toString());
     }
   }
 }
