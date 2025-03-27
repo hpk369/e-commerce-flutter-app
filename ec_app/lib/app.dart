@@ -1,8 +1,9 @@
-import 'package:ec_app/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:ec_app/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:ec_app/utils/theme/theme.dart';
 import 'package:get/get.dart';
+
+import 'bindings/general_bindings.dart';
 
 /// -- Use this Class to setup themes, initial bindings, any animations
 class App extends StatelessWidget {
@@ -14,6 +15,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
+      initialBinding: GeneralBindings(),
       /// Show Loader or Circular Progress Indicator meanwhile Authentication Repository id deciding to show relevant screen
       home: const Scaffold(
         backgroundColor: TColors.primary,
